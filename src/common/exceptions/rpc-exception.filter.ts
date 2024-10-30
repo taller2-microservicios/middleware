@@ -12,12 +12,12 @@ export class ExceptionCustomFilter implements ExceptionFilter {
 
     if(
       typeof rpcError === 'object' && 
-      'status' in rpcError && 
+      'statusCode' in rpcError && 
       'message' in rpcError
     ) {
       
-      const status = rpcError.status;
-      return response.status(status).json(rpcError);
+      const status = rpcError.statusCode;
+      return response.status(status).send(rpcError);
 
     }
 

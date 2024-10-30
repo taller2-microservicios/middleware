@@ -10,10 +10,10 @@ export class RegisterService {
     @Inject('REGISTER_SERVICE') private readonly registerClient: ClientProxy
   ) {}
 
-  async create(registerDto: RegisterDTO) {
+  async register(registerDTO: RegisterDTO) {
     try{
       const user = await firstValueFrom(
-        this.registerClient.send('createUser', registerDto)
+        this.registerClient.send('registerUser', registerDTO)
       )
       return user;
     }catch(e){
