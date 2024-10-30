@@ -3,7 +3,7 @@ import { LoginDto } from './dto/login.dto';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { firstValueFrom } from 'rxjs';
 import { JwtService } from '@nestjs/jwt';
-import { JWT_KEY } from 'src/common/constants/token.constants';
+import { JWT_KEY } from '../common/constants/token.constants';
 import { Token } from './dto/token.type';
 
 @Injectable()

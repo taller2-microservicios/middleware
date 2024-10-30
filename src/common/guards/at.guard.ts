@@ -1,7 +1,7 @@
 import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
 import { Request } from 'express';
 import { JwtService } from '@nestjs/jwt';
-import { JWT_KEY } from 'src/common/constants/token.constants';
+import { JWT_KEY } from '../../common/constants/token.constants';
 
 @Injectable()
 export class AtGuard implements CanActivate {

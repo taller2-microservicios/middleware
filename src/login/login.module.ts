@@ -3,7 +3,7 @@ import { LoginService } from './login.service';
 import { LoginController } from './login.controller';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { JwtModule, JwtService } from '@nestjs/jwt';
-import { JWT_KEY } from 'src/common/constants/token.constants';
+import { JWT_KEY } from '../common/constants/token.constants';
 
 @Module({
   imports: [
